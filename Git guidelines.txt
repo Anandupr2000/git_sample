@@ -1,0 +1,25 @@
+1)	to start new project with use "git init"
+	for cloning existing project for contributions use "git clone"
+2)	then "git status" to know status of runnig running or ran in that specific folder
+
+Creating Versions of desired project
+
+1) add file to git using "git add {filename}"
+   git expect this file to be committed next by user
+	"git add --all" or "git add ." is used to add all files to cache directory for commit.
+
+2) commit first file add by using "git commit -m "message used    to identify the version""
+	eg : git commit -m "Initial phase"
+
+	after completion of each major step create a version with specific message, for easy rollback.
+	Only those files version that are add to git  is committed  as new version, others are avoided
+	Each version produced with each commit has an id consisting of 40 letter checksum. It is made by combining which user made that change, at which time &  date, using which mail id, also details for previous commits.The commit id doesn't repeat.
+	head entity represents current committed version on which we are working, versus Mater represents last commit
+3) By using "git log" we can view all activities performed on a file
+4) By using commit id shown in result of above aommand we can rollback to desired version 
+	command: git checkout "commit_id"
+	now we can do desired changes......😜😜
+	
+	After performing this step "git log" will show only one commit along with id.
+	 For showing full log:
+		git log --all 
